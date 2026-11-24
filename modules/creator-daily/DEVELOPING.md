@@ -17,7 +17,7 @@
 
 ## 数据来源
 
-四个站点是 opencli 自带的站点，不单独安装；`package.json` 的 `dsh.workbench.needs` 声明一条 `bin: opencli`（opencli 由适配器提供），站点命令在运行时直接调用：
+`package.json` 的 `dsh.workbench.needs` 声明一条 `bin: opencli` 与四个 extension，每个 extension 带 `sources: [{ "kind": "builtin" }]` —— 它们由 opencli 自带，不单独安装；工作台会核对当前 opencli 清单里确实有这些命令：
 
 - `zhihu hot`、`weibo hot`、`bilibili hot`
 - `xiaohongshu creator-stats`、`creator-notes`、`publish`

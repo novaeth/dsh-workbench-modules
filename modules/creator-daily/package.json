@@ -1,6 +1,6 @@
 {
   "name": "@dsh-workbench/module-creator-daily",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "内容日更模块：今日选题、笔记数据与存草稿",
   "type": "module",
   "exports": {
@@ -69,6 +69,64 @@
           "kind": "bin",
           "name": "opencli",
           "purpose": "在机器上跑平台命令"
+        },
+        {
+          "kind": "extension",
+          "runtime": "opencli",
+          "name": "zhihu",
+          "commands": [
+            "hot"
+          ],
+          "purpose": "知乎热榜",
+          "sources": [
+            {
+              "kind": "builtin"
+            }
+          ]
+        },
+        {
+          "kind": "extension",
+          "runtime": "opencli",
+          "name": "weibo",
+          "commands": [
+            "hot"
+          ],
+          "purpose": "微博热搜",
+          "sources": [
+            {
+              "kind": "builtin"
+            }
+          ]
+        },
+        {
+          "kind": "extension",
+          "runtime": "opencli",
+          "name": "bilibili",
+          "commands": [
+            "hot"
+          ],
+          "purpose": "B 站热门",
+          "sources": [
+            {
+              "kind": "builtin"
+            }
+          ]
+        },
+        {
+          "kind": "extension",
+          "runtime": "opencli",
+          "name": "xiaohongshu",
+          "commands": [
+            "creator-stats",
+            "creator-notes",
+            "publish"
+          ],
+          "purpose": "小红书创作者数据与草稿",
+          "sources": [
+            {
+              "kind": "builtin"
+            }
+          ]
         }
       ]
     },
@@ -78,7 +136,7 @@
     }
   },
   "peerDependencies": {
-    "@dsh-workbench/core": "^1.5.2-alpha.5",
+    "@dsh-workbench/core": "^1.5.2-rc.0",
     "react": "*"
   },
   "peerDependenciesMeta": {
@@ -87,8 +145,8 @@
     }
   },
   "devDependencies": {
-    "@dsh-workbench/core": "1.5.2-alpha.5",
-    "@dsh-workbench/module-tools": "1.5.2-alpha.5",
+    "@dsh-workbench/core": "1.5.2-rc.0",
+    "@dsh-workbench/module-tools": "1.5.2-rc.0",
     "@types/node": "^24.19.0",
     "@types/react": "^19.3.0",
     "esbuild": "^0.28.2",
@@ -107,6 +165,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@dsh-workbench/shared": "1.5.2-alpha.5"
+    "@dsh-workbench/shared": "1.5.2-rc.0"
   }
 }
