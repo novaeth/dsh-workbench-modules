@@ -28,7 +28,7 @@ const face: UnitClientFace = {
       if (topics > 0) parts.push(`话题 ${String(topics)} 个`);
       return {
         object: t('creatorDaily.approval.object'),
-        objectLabel: t('creatorDaily.cardTitle'),
+        objectLabel: t('creatorDaily.approval.objectLabel'),
         change: parts.join(' · '),
         target: t('creatorDaily.approval.target'),
         impact: t('creatorDaily.approval.impact'),
