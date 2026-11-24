@@ -17,7 +17,7 @@
 
 ## 数据来源
 
-`package.json` 的 `dsh.workbench.needs` 声明一条 `bin: opencli` 与四个站点的扩展命令：
+四个站点是 opencli 自带的站点，不单独安装：`package.json` 的 `dsh.workbench.needs` 只声明一条 `bin: opencli`，站点命令在运行时直接调用：
 
 - `zhihu hot`、`weibo hot`、`bilibili hot`
 - `xiaohongshu creator-stats`、`creator-notes`、`publish`
