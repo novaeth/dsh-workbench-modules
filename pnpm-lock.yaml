@@ -14,15 +14,15 @@ importers:
   modules/creator-daily:
     dependencies:
       '@dsh-workbench/shared':
-        specifier: 1.5.2-alpha.5
-        version: 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
+        specifier: 1.5.2-rc.0
+        version: 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
     devDependencies:
       '@dsh-workbench/core':
-        specifier: 1.5.2-alpha.5
-        version: 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        specifier: 1.5.2-rc.0
+        version: 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@dsh-workbench/module-tools':
-        specifier: 1.5.2-alpha.5
-        version: 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
+        specifier: 1.5.2-rc.0
+        version: 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
       '@types/node':
         specifier: ^24.19.0
         version: 24.19.2
@@ -127,73 +127,73 @@ packages:
   '@cacheable/utils@2.5.0':
     resolution: {integrity: sha512-buipgOVDkkPXNR5+xBpDw7Zk2n1EvU7qBJCNUcL7rhQ//kfpOXPAvQ511Os0vpLYJ1pZnvudNytkQt2hst3wqA==}
 
-  '@deepseek-ai/cordis-plugin-loader@1.2.0-alpha.1':
-    resolution: {integrity: sha512-AzyooqwHMPxAKIBo5abbxdFYETGpXoOZ/VcXo+kaQP9scezK5900C1URm777gTvrWZ/PRZc1KPOTNbXs3LTsJQ==}
+  '@deepseek-ai/cordis-plugin-loader@1.1.0':
+    resolution: {integrity: sha512-154u0LnADauDvOdQ41QtoOrRFQtvP2Ih68aYYaXzI/l7gRPwX/5MDtDDsJWeDffQA3ELn2xt3MUYsyizi+O9KA==}
     peerDependencies:
-      '@deepseek-ai/cordis': ~4.2.0-alpha.1
-      node-addon-require-builtin: ^0.1.10
+      '@deepseek-ai/cordis': ~4.1.0
+      node-addon-require-builtin: ^0.1.9
     peerDependenciesMeta:
       node-addon-require-builtin:
         optional: true
 
-  '@deepseek-ai/cordis@4.2.0-alpha.1':
-    resolution: {integrity: sha512-SnqATTN5V8Izqu9LsWon6vxKedppIAhHaeBQ5r8D188UgG+VzNI3rpO5SIfzqxWt/3OUUCLo9OiXganW0IGdnA==}
+  '@deepseek-ai/cordis@4.1.0':
+    resolution: {integrity: sha512-CJrjNyBkKn1SfvBQUcgFYKFnLjS+uKrhdMsbHU60xabvi12d+xQ+IQSNlME5Z+B+4Zi6n4BDknKY94tEPeo47w==}
     hasBin: true
     peerDependencies:
-      '@deepseek-ai/cordis-plugin-include': ~1.2.0-alpha.1
-      '@deepseek-ai/cordis-plugin-loader': ~1.2.0-alpha.1
+      '@deepseek-ai/cordis-plugin-include': ~1.1.0
+      '@deepseek-ai/cordis-plugin-loader': ~1.1.0
     peerDependenciesMeta:
       '@deepseek-ai/cordis-plugin-include':
         optional: true
       '@deepseek-ai/cordis-plugin-loader':
         optional: true
 
-  '@deepseek-ai/cosmokit@1.10.0-alpha.1':
-    resolution: {integrity: sha512-vg1+m19Crrq4dVZ2Q6Zs/ydeyE2s9vENqmktJ1+liocKnvYZb3Jnt2bSvq6kLpVpsiM8OtvXVzschB9HfmGAxg==}
+  '@deepseek-ai/cosmokit@1.9.0':
+    resolution: {integrity: sha512-5O1S53mZiJyZYcvxxD0Qv1EY7qFPSxbGyD8CbVK6gw7W9FvcXZj2YIX1ZkOqyQQ3Xt2rFkZDHJv0+V3Zmmp8CA==}
 
-  '@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2':
-    resolution: {integrity: sha512-IfdmimIoxj6hJCaLiRw333BXCupJ2XjDFLrTwKpince89jTTuX34E2WDo5WKIaFajoPhrGzJQ0H2MF8Dx0L83g==}
+  '@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2':
+    resolution: {integrity: sha512-MqN5XnG+0OVgGosP13RH2pCjAmPl56G9j5Bl/fR7fAe9fol1TxrBIjzlMC+c3Oa3Ao32GgYn+/qMPnugxqZceQ==}
     peerDependencies:
-      '@deepseek-ai/cordis': ~4.2.0-alpha.1
+      '@deepseek-ai/cordis': ~4.1.0
 
-  '@deepseek-ai/schemastery@3.20.0-alpha.1':
-    resolution: {integrity: sha512-FOiLPnQmNNDz5kDzAMXQOjSAY6SZNHiz3CIOKOPqTZGwZTGCKqbTYtG9lQMi9sjOMUzqQPBH0lFunYsnlg8ddg==}
+  '@deepseek-ai/schemastery@3.19.0':
+    resolution: {integrity: sha512-bDXoYQa7ghAhmdYD5VPlzKxEzJV/aKkz5l4V5h1u06z8GAPN1ROewSjvR9WiXhpa52E9fng8lpH5QdCRIQgnyQ==}
 
-  '@dsh-workbench/adapter-probe@1.5.2-alpha.5':
-    resolution: {integrity: sha512-fEJsHgWSLkdu2y319bJoIVWdrTzwt9UtneM2tc7PVpX2zDNp5TjHkB+rAoCFYp0tlXQeXtgU0ikBHwn0s5VG1A==}
+  '@dsh-workbench/adapter-probe@1.5.2-rc.0':
+    resolution: {integrity: sha512-jYD/QBp/HbRFYf6As1t9rU2wcDH7Sqiocoe6t6eMzttYrGoPZs1gnd/Hk5Ni6yPM4iMVz9WgNOAlF0snMRUtDg==}
 
-  '@dsh-workbench/adapter-profile@1.5.2-alpha.5':
-    resolution: {integrity: sha512-zdVX+X+PnBj/Owr3DoCMSNsd3GOtjaTSLYsrZtmC3wkWHP7dfjcm8GaR2a4qNOMlKj8h8rC6MM4dWIss0vcA/Q==}
+  '@dsh-workbench/adapter-profile@1.5.2-rc.0':
+    resolution: {integrity: sha512-uI1jhaC/kgeCJRv06ZHAB8bqtM4G4/056Km6AX1xdbqUOCTBGSf4S2ktKSIgN2LyTStirfg/mJe1TotdawtyFQ==}
 
-  '@dsh-workbench/adapter-runtime@1.5.2-alpha.5':
-    resolution: {integrity: sha512-7Ewg9SXhQe+MQgqXZM3DPxFOdZaNMHvlw3KDTcG09t3vePfeq3wikhxhS/Wg4ZQYaTktmYaOFqh3B4we7f1TkA==}
+  '@dsh-workbench/adapter-runtime@1.5.2-rc.0':
+    resolution: {integrity: sha512-Vq8oolSEoI7pyISJY2oKDxYBBXje0GviZ4n9YxUX0ejkS9p/Q4F+uS7iDvZ5KTNkcsQIKBvrWOW/uO3OHAsJDw==}
 
-  '@dsh-workbench/adapter-supply@1.5.2-alpha.5':
-    resolution: {integrity: sha512-CyfUShnhEzR9AW3LLuma3aRUNtL3T69Fe/BpHWsLVhgjp+g7aAzjT2I62rN1dipKygWp1vPq4f0G/FxChmEAuw==}
+  '@dsh-workbench/adapter-supply@1.5.2-rc.0':
+    resolution: {integrity: sha512-aGDLgMa/Od2i3kvTwxQ3v4/3wh+4WJVLqGcgp68Dj4lllANieIVdKk4Xpbv0uFNl1hnFHeqCrWOTDK7XCqyxYQ==}
 
-  '@dsh-workbench/adapters-default@1.5.2-alpha.5':
-    resolution: {integrity: sha512-h1NNnQGn8SOvEVLOCLTrK37ijAyhqGtNdyINExVyYTa1F06PvKq2SXTdPs4dIH/nz47SitSvpP22HwOmWOPN8A==}
+  '@dsh-workbench/adapters-default@1.5.2-rc.0':
+    resolution: {integrity: sha512-X/KxbaQpdIUYgMGmi+LVyAGHjS9v9iXQCEGZUhTl1WFy9B1pp7RxDUXnQl/ZZTcSpCelqlKbeWZeM1OOGDZbgw==}
 
-  '@dsh-workbench/core@1.5.2-alpha.5':
-    resolution: {integrity: sha512-h5jO3Vrh64wJDhf85RW/+C9d2KHS6QRJk4jQ/XeqwmhyKYCvrfChJ5Oe9RFJG+G1JcfeJDFz20ybg+lf8AOp/g==}
-    engines: {dsh: '>=0.2.3-alpha.2'}
+  '@dsh-workbench/core@1.5.2-rc.0':
+    resolution: {integrity: sha512-uERqUuPI6LuKsJBeuxkLSYUe41IenF8TCy7wPuY5zaISKznINo/uRj07uDKx5mkU0hrKYW34UiSrk2EmQdxj2g==}
+    engines: {dsh: '>=0.2.2-rc.2'}
     hasBin: true
     peerDependencies:
-      '@deepseek-ai/dsh-client-ui-primitives': 0.2.3-alpha.2
+      '@deepseek-ai/dsh-client-ui-primitives': 0.2.2-rc.2
       react: '*'
       react-dom: '*'
     peerDependenciesMeta:
       react:
         optional: true
 
-  '@dsh-workbench/module-tools@1.5.2-alpha.5':
-    resolution: {integrity: sha512-ujehV+pjGkTtYkfgju4b03IY8kfL1n6zZMVk0Ih2K/eIxnl1uv4RhRxjRsc5hSpx94wt75edcbEQeDVDRcPsIw==}
+  '@dsh-workbench/module-tools@1.5.2-rc.0':
+    resolution: {integrity: sha512-N7oNh70vcwie0Qh+oqlWRnmK8Biztqo5lP73GEyRy+E4cdkPMGJpiOSSfaIF8xexCcGu6u3nG3SLvRNhrhlNng==}
     hasBin: true
 
-  '@dsh-workbench/shared@1.5.2-alpha.5':
-    resolution: {integrity: sha512-JifdcsI6zDrOjyzAgfB/dvhnNSfEi2drO3z9RJOdM0Akz8brj0/m13FA+m0roj3ZUcqFL5ezdVxiKexJu/ERXw==}
+  '@dsh-workbench/shared@1.5.2-rc.0':
+    resolution: {integrity: sha512-6qDNPczI3fy/nJ6O7EOuQ39Bm1+jkUfQr6lC7QD7JhfYih4mzdyNG1YINxehEveURx7Mxw/3zVhw9jEndcWQjw==}
     peerDependencies:
-      '@deepseek-ai/dsh-client-ui-primitives': 0.2.3-alpha.2
+      '@deepseek-ai/dsh-client-ui-primitives': 0.2.2-rc.2
       react: '*'
 
   '@esbuild/aix-ppc64@0.28.2':
@@ -1992,36 +1992,36 @@ snapshots:
       hashery: 1.5.1
       keyv: 5.6.0
 
-  '@deepseek-ai/cordis-plugin-loader@1.2.0-alpha.1(@deepseek-ai/cordis@4.2.0-alpha.1)':
+  '@deepseek-ai/cordis-plugin-loader@1.1.0(@deepseek-ai/cordis@4.1.0)':
     dependencies:
-      '@deepseek-ai/cordis': 4.2.0-alpha.1(@deepseek-ai/cordis-plugin-loader@1.2.0-alpha.1)
-      '@deepseek-ai/cosmokit': 1.10.0-alpha.1
-      '@deepseek-ai/schemastery': 3.20.0-alpha.1
+      '@deepseek-ai/cordis': 4.1.0(@deepseek-ai/cordis-plugin-loader@1.1.0)
+      '@deepseek-ai/cosmokit': 1.9.0
+      '@deepseek-ai/schemastery': 3.19.0
 
-  '@deepseek-ai/cordis@4.2.0-alpha.1(@deepseek-ai/cordis-plugin-loader@1.2.0-alpha.1)':
+  '@deepseek-ai/cordis@4.1.0(@deepseek-ai/cordis-plugin-loader@1.1.0)':
     dependencies:
-      '@deepseek-ai/cosmokit': 1.10.0-alpha.1
+      '@deepseek-ai/cosmokit': 1.9.0
       '@standard-schema/spec': 1.1.0
     optionalDependencies:
-      '@deepseek-ai/cordis-plugin-loader': 1.2.0-alpha.1(@deepseek-ai/cordis@4.2.0-alpha.1)
+      '@deepseek-ai/cordis-plugin-loader': 1.1.0(@deepseek-ai/cordis@4.1.0)
 
-  '@deepseek-ai/cosmokit@1.10.0-alpha.1': {}
+  '@deepseek-ai/cosmokit@1.9.0': {}
 
-  '@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1)':
+  '@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0)':
     dependencies:
-      '@deepseek-ai/cordis': 4.2.0-alpha.1(@deepseek-ai/cordis-plugin-loader@1.2.0-alpha.1)
+      '@deepseek-ai/cordis': 4.1.0(@deepseek-ai/cordis-plugin-loader@1.1.0)
 
-  '@deepseek-ai/schemastery@3.20.0-alpha.1':
+  '@deepseek-ai/schemastery@3.19.0':
     dependencies:
-      '@deepseek-ai/cosmokit': 1.10.0-alpha.1
+      '@deepseek-ai/cosmokit': 1.9.0
       '@standard-schema/spec': 1.1.0
 
-  '@dsh-workbench/adapter-probe@1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)':
+  '@dsh-workbench/adapter-probe@1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)':
     dependencies:
-      '@dsh-workbench/adapter-profile': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
-      '@dsh-workbench/adapter-runtime': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
-      '@dsh-workbench/adapter-supply': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
-      '@dsh-workbench/shared': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
+      '@dsh-workbench/adapter-profile': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
+      '@dsh-workbench/adapter-runtime': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
+      '@dsh-workbench/adapter-supply': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
+      '@dsh-workbench/shared': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
       proper-lockfile: 4.1.2
     transitivePeerDependencies:
       - '@deepseek-ai/cordis-plugin-include'
@@ -2029,9 +2029,9 @@ snapshots:
       - node-addon-require-builtin
       - react
 
-  '@dsh-workbench/adapter-profile@1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)':
+  '@dsh-workbench/adapter-profile@1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)':
     dependencies:
-      '@dsh-workbench/shared': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
+      '@dsh-workbench/shared': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
       execa: 10.2.1
       proper-lockfile: 4.1.2
     transitivePeerDependencies:
@@ -2040,9 +2040,9 @@ snapshots:
       - node-addon-require-builtin
       - react
 
-  '@dsh-workbench/adapter-runtime@1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)':
+  '@dsh-workbench/adapter-runtime@1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)':
     dependencies:
-      '@dsh-workbench/shared': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
+      '@dsh-workbench/shared': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
       execa: 10.2.1
     transitivePeerDependencies:
       - '@deepseek-ai/cordis-plugin-include'
@@ -2050,34 +2050,34 @@ snapshots:
       - node-addon-require-builtin
       - react
 
-  '@dsh-workbench/adapter-supply@1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)':
+  '@dsh-workbench/adapter-supply@1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)':
     dependencies:
-      '@dsh-workbench/adapter-runtime': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
-      '@dsh-workbench/shared': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
+      '@dsh-workbench/adapter-runtime': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
+      '@dsh-workbench/shared': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
     transitivePeerDependencies:
       - '@deepseek-ai/cordis-plugin-include'
       - '@deepseek-ai/dsh-client-ui-primitives'
       - node-addon-require-builtin
       - react
 
-  '@dsh-workbench/adapters-default@1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)':
+  '@dsh-workbench/adapters-default@1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)':
     dependencies:
-      '@dsh-workbench/adapter-probe': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
-      '@dsh-workbench/adapter-profile': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
-      '@dsh-workbench/adapter-runtime': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
-      '@dsh-workbench/adapter-supply': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
-      '@dsh-workbench/shared': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
+      '@dsh-workbench/adapter-probe': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
+      '@dsh-workbench/adapter-profile': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
+      '@dsh-workbench/adapter-runtime': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
+      '@dsh-workbench/adapter-supply': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
+      '@dsh-workbench/shared': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
     transitivePeerDependencies:
       - '@deepseek-ai/cordis-plugin-include'
       - '@deepseek-ai/dsh-client-ui-primitives'
       - node-addon-require-builtin
       - react
 
-  '@dsh-workbench/core@1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@dsh-workbench/core@1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
-      '@deepseek-ai/dsh-client-ui-primitives': 0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1)
-      '@dsh-workbench/adapters-default': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
-      '@dsh-workbench/shared': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
+      '@deepseek-ai/dsh-client-ui-primitives': 0.2.2-rc.2(@deepseek-ai/cordis@4.1.0)
+      '@dsh-workbench/adapters-default': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
+      '@dsh-workbench/shared': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
       dayjs: 1.11.23
       execa: 10.2.1
       prompts: 2.4.2
@@ -2093,10 +2093,10 @@ snapshots:
       - '@deepseek-ai/cordis-plugin-include'
       - node-addon-require-builtin
 
-  '@dsh-workbench/module-tools@1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)':
+  '@dsh-workbench/module-tools@1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)':
     dependencies:
       '@arch-guard/core': 0.12.0(typescript@5.9.3)
-      '@dsh-workbench/shared': 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
+      '@dsh-workbench/shared': 1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)
       '@eslint/js': 10.0.1(eslint@10.15.0)
       commander: 15.1.0
       esbuild: 0.28.2
@@ -2118,11 +2118,11 @@ snapshots:
       - react
       - supports-color
 
-  '@dsh-workbench/shared@1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)':
+  '@dsh-workbench/shared@1.5.2-rc.0(@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2(@deepseek-ai/cordis@4.1.0))(react@19.3.1)':
     dependencies:
-      '@deepseek-ai/cordis': 4.2.0-alpha.1(@deepseek-ai/cordis-plugin-loader@1.2.0-alpha.1)
-      '@deepseek-ai/cordis-plugin-loader': 1.2.0-alpha.1(@deepseek-ai/cordis@4.2.0-alpha.1)
-      '@deepseek-ai/dsh-client-ui-primitives': 0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1)
+      '@deepseek-ai/cordis': 4.1.0(@deepseek-ai/cordis-plugin-loader@1.1.0)
+      '@deepseek-ai/cordis-plugin-loader': 1.1.0(@deepseek-ai/cordis@4.1.0)
+      '@deepseek-ai/dsh-client-ui-primitives': 0.2.2-rc.2(@deepseek-ai/cordis@4.1.0)
       dayjs: 1.11.23
       execa: 10.2.1
       proper-lockfile: 4.1.2
