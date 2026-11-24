@@ -27,11 +27,11 @@ const face: UnitClientFace = {
       if (images > 0) parts.push(`图片 ${String(images)} 张`);
       if (topics > 0) parts.push(`话题 ${String(topics)} 个`);
       return {
-        object: t('creatorDaily.approval.object'),
-        objectLabel: t('creatorDaily.approval.objectLabel'),
+        object: t('creator-daily.approval.object'),
+        objectLabel: t('creator-daily.approval.objectLabel'),
         change: parts.join(' · '),
-        target: t('creatorDaily.approval.target'),
-        impact: t('creatorDaily.approval.impact'),
+        target: t('creator-daily.approval.target'),
+        impact: t('creator-daily.approval.impact'),
       };
     },
   },

@@ -64,6 +64,13 @@ export interface NotesRead {
   readonly sources: readonly SourceResult[];
 }
 
+function markEmpty(sources: SourceResult[], site: string): void {
+  const at = sources.findIndex((one) => one.site === site && one.ok);
+  if (at !== -1) {
+    sources[at] = { site, ok: false, code: 'empty', message: '没有读到内容（可能未登录）' };
+  }
+}
+
 export interface Readers {
   topics(limit: number): Promise<TopicsRead>;
   notes(limit: number): Promise<NotesRead>;
@@ -84,21 +91,26 @@ export function createReaders(deps: UnitMountDeps): Readers {
         read(weibo, 'weibo', '微博', ['hot', '--limit', String(limit)], sources),
         read(bilibili, 'bilibili', 'B 站', ['hot', '--limit', String(limit)], sources),
       ]);
-      const rows = [
-        ...normalizeZhihu(zhihuRaw),
-        ...normalizeWeibo(weiboRaw),
-        ...normalizeBilibili(bilibiliRaw),
-      ];
-      return { topics: rows, sources };
+      const zhihuRows = normalizeZhihu(zhihuRaw);
+      const weiboRows = normalizeWeibo(weiboRaw);
+      const bilibiliRows = normalizeBilibili(bilibiliRaw);
+      if (zhihuRows.length === 0) markEmpty(sources, '知乎');
+      if (weiboRows.length === 0) markEmpty(sources, '微博');
+      if (bilibiliRows.length === 0) markEmpty(sources, 'B 站');
+      return { topics: [...zhihuRows, ...weiboRows, ...bilibiliRows], sources };
     },
 
     async notes(limit) {
       const sources: SourceResult[] = [];
       const [statsRaw, notesRaw] = await Promise.all([
-        read(xiaohongshu, 'xiaohongshu', '小红书', ['creator-stats', '--period', '7d'], sources),
+        read(xiaohongshu, 'xiaohongshu', '小红书', ['creator-stats', '--period', 'seven'], sources),
         read(xiaohongshu, 'xiaohongshu', '小红书', ['creator-notes', '--limit', String(limit)], sources),
       ]);
-      return { metrics: normalizeMetrics(statsRaw), notes: normalizeNotes(notesRaw), sources };
+      const metrics = normalizeMetrics(statsRaw);
+      const noteRows = normalizeNotes(notesRaw);
+      if (metrics.length === 0) markEmpty(sources, '小红书');
+      if (noteRows.length === 0) markEmpty(sources, '小红书');
+      return { metrics, notes: noteRows, sources };
     },
 
     async saveDraft(input) {

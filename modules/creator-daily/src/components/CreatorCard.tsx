@@ -23,8 +23,8 @@ export interface CreatorCardProps {
 }
 
 function sourceLine(source: SourceResult, t: (key: string) => string): string {
-  if (source.code === 'auth-required') return `${source.site}：${t('creatorDaily.login')}`;
-  return `${source.site}：${source.message ?? source.code ?? t('creatorDaily.unreadable')}`;
+  if (source.code === 'auth-required') return `${source.site}：${t('creator-daily.login')}`;
+  return `${source.site}：${source.message ?? source.code ?? t('creator-daily.unreadable')}`;
 }
 
 export function CreatorCard(props: CreatorCardProps): ReturnType<typeof h> {
@@ -38,13 +38,13 @@ export function CreatorCard(props: CreatorCardProps): ReturnType<typeof h> {
 
   const body: ReturnType<typeof h>[] = [];
   if (resource.phase === 'error') {
-    body.push(h('p', { key: 'error' }, `${props.t('creatorDaily.unreadable')}${resource.error?.code ?? ''} ${resource.error?.message ?? ''}`));
+    body.push(h('p', { key: 'error' }, `${props.t('creator-daily.unreadable')}${resource.error?.code ?? ''} ${resource.error?.message ?? ''}`));
   } else if (value === undefined) {
-    body.push(h('p', { key: 'loading' }, props.t('creatorDaily.loading')));
+    body.push(h('p', { key: 'loading' }, props.t('creator-daily.loading')));
   } else {
-    body.push(h('p', { key: 'topics-title' }, props.t('creatorDaily.topics')));
+    body.push(h('p', { key: 'topics-title' }, props.t('creator-daily.topics')));
     if (topics.length === 0) {
-      body.push(h('p', { key: 'topics-empty' }, props.t('creatorDaily.empty')));
+      body.push(h('p', { key: 'topics-empty' }, props.t('creator-daily.empty')));
     } else {
       body.push(
         h(
@@ -57,9 +57,9 @@ export function CreatorCard(props: CreatorCardProps): ReturnType<typeof h> {
       );
     }
 
-    body.push(h('p', { key: 'metrics-title' }, props.t('creatorDaily.metrics')));
+    body.push(h('p', { key: 'metrics-title' }, props.t('creator-daily.metrics')));
     if (metrics.length === 0) {
-      body.push(h('p', { key: 'metrics-empty' }, props.t('creatorDaily.empty')));
+      body.push(h('p', { key: 'metrics-empty' }, props.t('creator-daily.empty')));
     } else {
       body.push(
         h(
@@ -70,9 +70,9 @@ export function CreatorCard(props: CreatorCardProps): ReturnType<typeof h> {
       );
     }
 
-    body.push(h('p', { key: 'notes-title' }, props.t('creatorDaily.notes')));
+    body.push(h('p', { key: 'notes-title' }, props.t('creator-daily.notes')));
     if (notes.length === 0) {
-      body.push(h('p', { key: 'notes-empty' }, props.t('creatorDaily.empty')));
+      body.push(h('p', { key: 'notes-empty' }, props.t('creator-daily.empty')));
     } else {
       body.push(
         h(
@@ -83,7 +83,7 @@ export function CreatorCard(props: CreatorCardProps): ReturnType<typeof h> {
       );
     }
 
-    if (nothing) body.push(h('p', { key: 'hint' }, props.t('creatorDaily.emptyHint')));
+    if (nothing) body.push(h('p', { key: 'hint' }, props.t('creator-daily.emptyHint')));
   }
 
   if (failed.length > 0) {
@@ -94,7 +94,7 @@ export function CreatorCard(props: CreatorCardProps): ReturnType<typeof h> {
     Card,
     {
       t: props.t,
-      title: props.t('creatorDaily.cardTitle'),
+      title: props.t('creator-daily.cardTitle'),
       refreshing: resource.phase === 'loading',
       onRefresh: props.onRefresh,
     },
