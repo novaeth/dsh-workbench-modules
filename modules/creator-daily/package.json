@@ -1,6 +1,6 @@
 {
   "name": "@dsh-workbench/module-creator-daily",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "内容日更模块：今日选题、笔记数据与存草稿",
   "type": "module",
   "exports": {
@@ -64,7 +64,13 @@
           "tools"
         ]
       },
-      "needs": []
+      "needs": [
+        {
+          "kind": "bin",
+          "name": "opencli",
+          "purpose": "在机器上跑平台命令"
+        }
+      ]
     },
     "workbenchFaces": {
       "host": "src/host.ts",
