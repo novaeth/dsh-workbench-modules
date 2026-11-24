@@ -1,25 +1,34 @@
 # @dsh-workbench/module-creator-daily · 作者文档
 
-终端用户看 [README.md](README.md)；这份讲文件怎么分层、为什么 0.1.0 没有数据。
+终端用户看 [README.md](README.md)；这份讲分层、数据来源与检查。
 
 ## 分层
 
 | 文件 | 负责 |
 |---|---|
-| `src/host.ts` | 宿主半侧：把模块注册进外壳的 `workbenchUnits` |
-| `src/client.tsx` | 浏览器半侧：把卡片注册进外壳；标题与顺序来自 `package.json` 的 `dsh.workbench` |
-| `src/messages.ts` | 卡片文案（中文 / 英文） |
-| `scripts/smoke.mjs` | 装配自检：`client.js` 调用加载器、宿主注册模块、缺少服务时报错 |
+| `src/host.ts` | 注册模块的面：路由、工具、审批与事实失效 |
+| `src/host/readers.ts` | 调 opencli 读三个热榜与小红书创作者数据 |
+| `src/host/routes.ts` | `creator-daily/overview`：一次返回选题、指标与最近笔记 |
+| `src/host/tools.ts` | 三个 agent 工具；写工具只存草稿 |
+| `src/host/approval.ts` | 存草稿的审批问句与原因 |
+| `src/model/*.ts` | 纯归一与校验（有同名测试） |
+| `src/components/CreatorCard.tsx` | 卡片：三块内容与读失败提示 |
+| `src/client.tsx` | 注册卡片与审批屏四行 |
 
-## 为什么 0.1.0 没有数据
+## 数据来源
 
-数据来自浏览器里已登录的会话，读取与登录都依赖平台页面。先把「模块能被外壳装配、构建与自动检查能过」做对，
-再在 0.2.0 加数据源声明与读工具；否则装配问题与登录问题会混在一起。
+`package.json` 的 `dsh.workbench.needs` 声明一条 `bin: opencli` 与四个站点的扩展命令：
 
-## 自动检查
+- `zhihu hot`、`weibo hot`、`bilibili hot`
+- `xiaohongshu creator-stats`、`creator-notes`、`publish`
+
+读取走 `extensionCallerOf`，写入走同一条通道；模块自己不保存凭据。
+
+## 检查
 
 ```bash
 pnpm -r build
 pnpm -r check
 pnpm -r typecheck
+pnpm -r test
 ```

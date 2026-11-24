@@ -1,7 +1,7 @@
 {
   "name": "@dsh-workbench/module-creator-daily",
-  "version": "0.1.0",
-  "description": "内容日更模块：今日选题、笔记数据与草稿（0.1.0 只有模块卡片）",
+  "version": "0.2.0",
+  "description": "内容日更模块：今日选题、笔记数据与存草稿",
   "type": "module",
   "exports": {
     ".": "./dist/host.js",
@@ -41,10 +41,74 @@
       "card": {
         "order": 90
       },
-      "tools": [],
+      "tools": [
+        {
+          "name": "creator-daily_topics",
+          "writes": false,
+          "key": "topics"
+        },
+        {
+          "name": "creator-daily_notes",
+          "writes": false,
+          "key": "notes"
+        },
+        {
+          "name": "creator-daily_save_draft",
+          "writes": true,
+          "key": "saveDraft"
+        }
+      ],
       "host": {
-        "inject": []
-      }
+        "inject": [],
+        "optional": [
+          "tools"
+        ]
+      },
+      "needs": [
+        {
+          "kind": "bin",
+          "name": "opencli",
+          "purpose": "读取热榜与创作者数据"
+        },
+        {
+          "kind": "extension",
+          "runtime": "opencli",
+          "name": "zhihu",
+          "commands": [
+            "hot"
+          ],
+          "purpose": "知乎热榜"
+        },
+        {
+          "kind": "extension",
+          "runtime": "opencli",
+          "name": "weibo",
+          "commands": [
+            "hot"
+          ],
+          "purpose": "微博热搜"
+        },
+        {
+          "kind": "extension",
+          "runtime": "opencli",
+          "name": "bilibili",
+          "commands": [
+            "hot"
+          ],
+          "purpose": "B 站热门"
+        },
+        {
+          "kind": "extension",
+          "runtime": "opencli",
+          "name": "xiaohongshu",
+          "commands": [
+            "creator-stats",
+            "creator-notes",
+            "publish"
+          ],
+          "purpose": "小红书创作者数据与草稿"
+        }
+      ]
     },
     "workbenchFaces": {
       "host": "src/host.ts",
@@ -79,5 +143,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@dsh-workbench/shared": "1.5.2-alpha.5"
   }
 }

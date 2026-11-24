@@ -12,6 +12,10 @@ importers:
   .: {}
 
   modules/creator-daily:
+    dependencies:
+      '@dsh-workbench/shared':
+        specifier: 1.5.2-alpha.5
+        version: 1.5.2-alpha.5(@deepseek-ai/dsh-client-ui-primitives@0.2.3-alpha.2(@deepseek-ai/cordis@4.2.0-alpha.1))(react@19.3.1)
     devDependencies:
       '@dsh-workbench/core':
         specifier: 1.5.2-alpha.5
