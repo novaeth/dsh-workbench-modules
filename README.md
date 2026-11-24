@@ -14,7 +14,7 @@
 
 | 模块 | 角色 | 状态 |
 |---|---|---|
-| [`modules/creator-daily`](modules/creator-daily) | 内容创作者：今日选题 → 我的笔记数据 → 存草稿 | v0.1 骨架，v0.2 接入 opencli 数据与审批 |
+| [`modules/creator-daily`](modules/creator-daily) | 内容创作者：今日选题、笔记数据与草稿 | 0.1.0 只有模块卡片；数据源与审批在 0.2.0 接入 |
 
 ## 开发
 

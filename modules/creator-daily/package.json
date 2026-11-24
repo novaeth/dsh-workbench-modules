@@ -1,7 +1,7 @@
 {
   "name": "@dsh-workbench/module-creator-daily",
   "version": "0.1.0",
-  "description": "内容日更模块：今日选题、我的笔记数据与发布草稿（v0.1 骨架）",
+  "description": "内容日更模块：今日选题、笔记数据与草稿（0.1.0 只有模块卡片）",
   "type": "module",
   "exports": {
     ".": "./dist/host.js",
